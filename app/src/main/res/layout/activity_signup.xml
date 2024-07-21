@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Top Paint Image with Zero Padding -->
+    <ImageView
+        android:id="@+id/imageViewTop"
+        android:layout_width="match_parent"
+        android:layout_height="137dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/paint"
+        android:padding="0dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/imageViewTop"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewDuet"
+                android:layout_width="67dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/font_family"
+                android:text="Duet"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+            <!-- Logo -->
+            <ImageView
+                android:id="@+id/main"
+                android:layout_width="84dp"
+                android:layout_height="78dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="0dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/applogo" />
+
+            <!-- Rest of the App Content -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Name -->
+                <EditText
+                    android:id="@+id/editTextName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_background_hover"
+                    android:hint="Name"
+                    android:inputType="text"
+                    android:layout_marginTop="50dp"/>
+
+                <!-- Email -->
+                <EditText
+                    android:id="@+id/editTextEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_background_hover"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:layout_marginTop="20dp"/>
+
+                <!-- Phone Number -->
+                <EditText
+                    android:id="@+id/editTextPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_background_hover"
+                    android:hint="Phone Number"
+                    android:inputType="phone"
+                    android:layout_marginTop="20dp"/>
+
+                <!-- Password -->
+                <EditText
+                    android:id="@+id/editTextPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_background_hover"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:layout_marginTop="20dp"/>
+
+                <!-- Signup Button -->
+                <Button
+                    android:id="@+id/buttonSignup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_button"
+                    app:rippleColor="#FF0000"
+                    android:text="Signup"
+                    android:textColorLink="#E40000"
+                    android:layout_marginTop="50dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Bottom Paint Image with 180-Degree Rotation -->
+    <ImageView
+        android:id="@+id/imageViewBottom"
+        android:layout_width="match_parent"
+        android:layout_height="137dp"
+        android:layout_alignParentBottom="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/paint"
+        android:rotation="180" />
+
+</RelativeLayout>
